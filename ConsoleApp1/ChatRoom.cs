@@ -11,19 +11,19 @@ using ConsoleApp1;
 namespace JustAnotherApp
 
 {
-    public delegate void MessageBroadcastHandler(string name);
+    public delegate void MessageBroadcastHandler(string message);
 
 
     public class ChatRoom
     {
         public event MessageBroadcastHandler MessageBroadcasted;
 
-        public void BroadcastMessage(ChatRoom chatRoom, string message)
+        public void BroadcastMessage(string message)
         {
             MessageBroadcasted?.Invoke(message);
         }
 
 
-        
+
     }
 }
